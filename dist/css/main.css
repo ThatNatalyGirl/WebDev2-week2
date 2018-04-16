@@ -73,8 +73,7 @@ table {
 }
 
 body {
-	background: url(../img/bg.jpg) no-repeat center;
-	background-size: auto;
+	background: #e1a760;
 	font-family: "Londrina Shadow", cursive;
 	height: 100%;
 }
@@ -162,11 +161,26 @@ section ul li {
 	text-align: left;
 	list-style-type: circle;
 	font-family: "Concert One", cursive;
+	margin-left: 1em;
 }
 
 section div {
 	font-size: 25px;
 	padding-bottom: 30px;
+}
+
+section.sect-3 {
+	border: 3px solid #7aa54e;
+}
+
+section.sect-3 h3 {
+	color: #7aa54e;
+}
+
+section.sect-3 button {
+	border-color: #7aa54e;
+	color: #7aa54e;
+	text-shadow: 1px 1px 1px #000, 2px 2px 2px green;
 }
 
 button {
@@ -206,11 +220,14 @@ button:focus {
 		border-left: none;
 		border-right: none;
 	}
+	header .burger:hover {
+		background: #eab985;
+	}
 	.wrapper {
 		display: flex;
 		flex-direction: column;
-		margin: 0 18.5%;
-		width: 63%;
+		width: 79%;
+		margin: 0 10%;
 	}
 	button:hover {
 		background: #eab985;
@@ -218,16 +235,15 @@ button:focus {
 }
 
 @media only screen and (min-width: 960px) {
+	body {
+		background: url(../img/bg.jpg) no-repeat center;
+		background-size: 100% 100%;
+	}
 	header {
 		padding: 35px 6% 35px 6%;
 	}
 	header .logo {
 		width: 110px;
-	}
-	header h1 {
-		font-size: 55px;
-		margin: 0 5% 20px 0;
-		width: 100%;
 	}
 	.wrapper {
 		flex-direction: row;
@@ -243,6 +259,13 @@ button:focus {
 		text-shadow: 1px 1px 1px #4d4d4d;
 		text-decoration: underline;
 		padding-bottom: 20px;
+	}
+	.wrapper section p {
+		font-size: 20px;
+	}
+	.wrapper section div {
+		font-family: "Concert One", cursive;
+		font-size: 35px;
 	}
 }
 

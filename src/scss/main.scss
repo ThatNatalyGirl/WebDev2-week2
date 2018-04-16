@@ -25,8 +25,7 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: url(../img/bg.jpg) no-repeat center;
-	background-size: auto;
+	background: #e1a760;
 	font-family: $main-font;
 	height: 100%;
 
@@ -112,13 +111,28 @@ section{
 			text-align: left;
 			list-style-type: circle;
 			font-family: $sub-font;
+			margin-left: 1em;
 		}	
-
 	}
 
 	div{
 		font-size: 25px;
 		padding-bottom: 30px;
+	}
+}
+
+section.sect-3{
+	border: 3px solid #7aa54e;
+
+	h3{
+		color: #7aa54e;
+
+	}
+
+	button{
+		border-color: #7aa54e;
+		color: #7aa54e;
+		text-shadow: 1px 1px 1px #000, 2px 2px 2px green;
 	}
 }
 
@@ -159,13 +173,17 @@ button{
 	header{
 		border-left: none;
 		border-right: none;
+
+		.burger:hover{
+			background: $secondary-color;
+		}
 	}
 
 	.wrapper{
 		@include flex;
 		flex-direction: column;
-		margin: 0 18.5%;
-		width: 63%;
+		width: 79%;
+		margin: 0 10%;
 	}
 
 	button:hover{
@@ -175,25 +193,22 @@ button{
 
 //////////DESKTOP//////////////
 @include bp-desktop {
+	body{
+		background: url(../img/bg.jpg) no-repeat center;
+		background-size: 100% 100%;
+		}
 
 	header{
 		padding: 35px 6% 35px 6%;
 
 		.logo{
 			width: 110px;
-
 		}
-
-		h1{
-			font-size: 55px;
-			margin: 0 5% 20px 0;
-			width: 100%;
-		}
-
 	}
 
 	.wrapper{
-		flex-direction: row; 
+		flex-direction: row;
+
 		section{
 			padding: 1em;
 			margin: 0 .5em .8em;
@@ -205,6 +220,15 @@ button{
 				text-shadow: 1px 1px 1px $shadows;
 				text-decoration: underline;
 				padding-bottom: 20px;
+			}
+
+			p{
+				font-size: 20px;
+			}
+
+			div{
+				font-family: $sub-font;
+				font-size: 35px;
 			}
 		}
 	}	
