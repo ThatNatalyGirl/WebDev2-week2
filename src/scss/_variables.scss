@@ -10,8 +10,17 @@ $secondary-color: #eab985;
 $borders: #000;
 $shadows:#4d4d4d;
 
+$main-font: 'Londrina Shadow', cursive;
+$sub-font: 'Concert One', cursive;
+
 @mixin bp-tablet{
 	@media only screen and (min-width: $tablet-breakpoint){
+		@content;
+	}	
+}	
+
+@mixin bp-desktop{
+	@media only screen and (min-width: $desktop-breakpoint){
 		@content;
 	}	
 }	

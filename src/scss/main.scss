@@ -1,19 +1,19 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
+CONTENT:	Rent-A-Cat
+AUTHOR:		Nataly Garzon
 ==============================================
 
 TABLE OF CONTENTS:
 
-0. Reset
+0. Reset, etc.
 1. Main Layout
 2. Content
 
 ==============================================
 */
 
-/* 0. Reset ================================= */
+/* 0. Reset, etc. ================================= */
 @import 'reset';
 
 @import 'variables';
@@ -26,19 +26,15 @@ TABLE OF CONTENTS:
 
 body {
 	background: url(../img/bg.jpg) no-repeat center;
-	background-size: cover;
-	font-family: 'Londrina Shadow', cursive;
+	background-size: auto;
+	font-family: $main-font
 	height: 100vh;
 
 	.wrapper{
-		margin: 0 18.5%;
 		background: $secondary-color;
 		border-left: 5px solid $borders;
 		border-right: 5px solid $borders;
 		padding: 20px 2%;
-		@include flex;
-		height: 80%;
-		width: 63%;
 	}
 }
 
@@ -46,44 +42,40 @@ body {
 
 header{
 	background: $primary-color;
-	padding: 35px 18.5% 35px 18.5%;
+	padding: 35px 6% 35px 6%;
 	@include flex;
-	border-top: 5px solid $borders;
-	border-bottom: 5px solid $borders;
-
-	img{
-		position: absolute;
-		top: 20px;
-	}
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid $borders;
 
 	.logo{
-		height: 90px;
+		height: 100px;
+		width: 110px;
 		left: 155px;		
 		border: 3px solid $borders;
 	}
 
 	h1{
-		font-size: 55px;
-		margin: 0 5% 20px 0;
+		font-size: 70px;
 		text-shadow: 2px 2px 2px $shadows;
-		width: 100%;
+		padding: 20px 0;
 	}
 
 	h2{
+		font-family: $sub-font;
 		font-size: 30px;
 		text-align: center;
 		text-shadow: 1px 1px 1px $shadows;
-		
-		height: 100%;
 	}
 
 	.burger{
-		right: 155px;
+		position: absolute;
+		right: 25px;
 		top: 35px;
 		height: 60px;
 		
 		&:hover{
-			background: $secondary-color;
+			background: none;
 		}
 	}
 
@@ -95,7 +87,7 @@ section{
 	flex-direction: column; /*bc it is naturally in a row*/
 	flex: 1; /*now they all have the same widths*/
 	height: auto;
-	padding: 1em;
+	padding: 2em;
 	margin: 0 .5em .8em;
 	border-radius: .35em;
 	color: #d8b9a5;
@@ -106,15 +98,33 @@ section{
 		text-decoration: underline;
 		padding-bottom: 20px;
 	}
+
+	h4{
+
+	}
+
+	ul{
+		margin-left: 3em;
+		text-align: left;
+
+		li{
+			list-style-type: url(../img/paw.png);
+			font-family: $sub-font;
+		}	
+	}
+}
+
+ul li{
+	color: blue;
 }
 
 .sect-1{
 	background: url(../img/cat1.jpg) right no-repeat;
-	background-size: cover;	
+	background-size: cover; 	
 }
 
 .sect-2{
-	background: url(../img/cat2.jpg) right no-repeat;
+	background: url(../img/cat2.jpg) center no-repeat;
 	background-size: cover;	
 }
 
@@ -123,23 +133,97 @@ section{
 	background-size: cover;	
 }
 
-button{
-	margin-top: auto;
-	font-family: 'Londrina Shadow', cursive;
-	font-size: 1.4em;
-	text-shadow: 1px 1px 1px $shadows;
-	height: 50px;
-	width: 80%;
-	align-self: center;
-	background: $primary-color;
-	border: 3px solid $borders;
-	border-radius: 1em;
-
-	&:hover{
-		background: $secondary-color;
+@mixin bp-tablet{
+	.wrapper{
+		@include flex;
+		margin: 0 18.5%;
+		width: 63%;
 	}
 }
 
+@mixin bp-desktop{
+
+	header{
+		background: $primary-color;
+		padding: 35px 18.5% 35px 18.5%;
+		@include flex;
+		border-top: 5px solid $borders;
+		border-bottom: 5px solid $borders;
+
+		img{
+			position: absolute;
+			top: 20px;
+		}
+
+		.logo{
+			height: 90px;
+			left: 155px;		
+			border: 3px solid $borders;
+		}
+
+		h1{
+			font-size: 55px;
+			margin: 0 5% 20px 0;
+			text-shadow: 2px 2px 2px $shadows;
+			width: 100%;
+		}
+
+		h2{
+			font-size: 30px;
+			text-align: center;
+			text-shadow: 1px 1px 1px $shadows;
+			height: 100%;
+		}
+
+		.burger{
+			right: 155px;
+			top: 35px;
+			height: 60px;
+			
+			&:hover{
+				background: $secondary-color;
+			}
+		}
+
+	}
+
+	section{
+		text-align: center;
+		@include flex;
+		flex-direction: column; /*bc it is naturally in a row*/
+		flex: 1; /*now they all have the same widths*/
+		height: auto;
+		padding: 1em;
+		margin: 0 .5em .8em;
+		border-radius: .35em;
+		color: #d8b9a5;
+
+		h3{
+			font-size: 30px;
+			text-shadow: 1px 1px 1px $shadows;
+			text-decoration: underline;
+			padding-bottom: 20px;
+		}
+	}
+
+
+	button{
+		margin-top: auto;
+		font-family: 'Londrina Shadow', cursive;
+		font-size: 1.4em;
+		text-shadow: 1px 1px 1px $shadows;
+		height: 50px;
+		width: 80%;
+		align-self: center;
+		background: $primary-color;
+		border: 3px solid $borders;
+		border-radius: 1em;
+
+		&:hover{
+			background: $secondary-color;
+		}
+	}
+}
 
 
 

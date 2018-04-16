@@ -1,18 +1,18 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
+CONTENT:	Rent-A-Cat
+AUTHOR:		Nataly Garzon
 ==============================================
 
 TABLE OF CONTENTS:
 
-0. Reset
+0. Reset, etc.
 1. Main Layout
 2. Content
 
 ==============================================
 */
-/* 0. Reset ================================= */
+/* 0. Reset, etc. ================================= */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -74,64 +74,57 @@ table {
 
 body {
 	background: url(../img/bg.jpg) no-repeat center;
-	background-size: cover;
+	background-size: auto;
 	font-family: 'Londrina Shadow', cursive;
 	height: 100vh;
 }
 
 body .wrapper {
-	margin: 0 18.5%;
 	background: #eab985;
 	border-left: 5px solid #000;
 	border-right: 5px solid #000;
 	padding: 20px 2%;
-	display: flex;
-	height: 80%;
-	width: 63%;
 }
 
 /* 2. Content ================================= */
 header {
 	background: #ad8255;
-	padding: 35px 18.5% 35px 18.5%;
+	padding: 35px 6% 35px 6%;
 	display: flex;
-	border-top: 5px solid #000;
-	border-bottom: 5px solid #000;
-}
-
-header img {
-	position: absolute;
-	top: 20px;
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid #000;
 }
 
 header .logo {
-	height: 90px;
+	height: 100px;
+	width: 110px;
 	left: 155px;
 	border: 3px solid #000;
 }
 
 header h1 {
-	font-size: 55px;
-	margin: 0 5% 20px 0;
+	font-size: 70px;
 	text-shadow: 2px 2px 2px #4d4d4d;
-	width: 100%;
+	padding: 20px 0;
 }
 
 header h2 {
+	font-family: 'Concert One', cursive;
 	font-size: 30px;
 	text-align: center;
 	text-shadow: 1px 1px 1px #4d4d4d;
-	height: 100%;
 }
 
 header .burger {
-	right: 155px;
+	position: absolute;
+	right: 25px;
 	top: 35px;
 	height: 60px;
 }
 
 header .burger:hover {
-	background: #eab985;
+	background: none;
 }
 
 section {
@@ -142,7 +135,7 @@ section {
 	flex: 1;
 	/*now they all have the same widths*/
 	height: auto;
-	padding: 1em;
+	padding: 2em;
 	margin: 0 .5em .8em;
 	border-radius: .35em;
 	color: #d8b9a5;
@@ -155,36 +148,28 @@ section h3 {
 	padding-bottom: 20px;
 }
 
+section ul {
+	margin-left: 3em;
+	text-align: left;
+}
+
+section ul li {
+	list-style-type: circle;
+}
+
 .sect-1 {
 	background: url(../img/cat1.jpg) right no-repeat;
 	background-size: cover;
 }
 
 .sect-2 {
-	background: url(../img/cat2.jpg) right no-repeat;
+	background: url(../img/cat2.jpg) center no-repeat;
 	background-size: cover;
 }
 
 .sect-3 {
 	background: url(../img/cat4.jpg) left no-repeat;
 	background-size: cover;
-}
-
-button {
-	margin-top: auto;
-	font-family: 'Londrina Shadow', cursive;
-	font-size: 1.4em;
-	text-shadow: 1px 1px 1px #4d4d4d;
-	height: 50px;
-	width: 80%;
-	align-self: center;
-	background: #ad8255;
-	border: 3px solid #000;
-	border-radius: 1em;
-}
-
-button:hover {
-	background: #eab985;
 }
 
 /*# sourceMappingURL=main.css.map */
