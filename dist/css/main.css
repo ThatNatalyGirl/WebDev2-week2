@@ -177,12 +177,7 @@ section.sect-3 h3 {
 	color: #7aa54e;
 }
 
-.notice-me-button {
-	border-color: #7aa54e;
-	text-shadow: 1px 1px 1px #000, 2px 2px 2px #7aa54e;
-}
-
-button, .notice-me-button {
+button {
 	margin-top: auto;
 	font-family: 'Londrina Shadow', cursive;
 	font-size: 1.4em;
@@ -195,8 +190,13 @@ button, .notice-me-button {
 	border-radius: 1em;
 }
 
-button:focus, .notice-me-button:focus {
+button:focus {
 	outline: 0;
+}
+
+.notice-me-button {
+	border-color: #7aa54e;
+	text-shadow: 1px 1px 1px #000, 2px 2px 2px #7aa54e;
 }
 
 .sect-1 {
@@ -228,7 +228,7 @@ button:focus, .notice-me-button:focus {
 		width: 79%;
 		margin: 0 10%;
 	}
-	button:hover, .notice-me-button:hover {
+	button:hover {
 		background: #eab985;
 	}
 }

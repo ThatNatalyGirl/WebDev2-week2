@@ -129,12 +129,6 @@ section.sect-3{
 	}
 }
 
-.notice-me-button{
-	@extend button;
-	border-color: #7aa54e;
-	text-shadow: 1px 1px 1px #000, 2px 2px 2px #7aa54e;
-}
-
 button{
 	margin-top: auto;
 	font-family: 'Londrina Shadow', cursive;
@@ -150,6 +144,12 @@ button{
 	&:focus{
 		outline: 0;
 	}	
+}
+
+.notice-me-button{
+	@extend .notice-me-button;
+	border-color: #7aa54e;
+	text-shadow: 1px 1px 1px #000, 2px 2px 2px #7aa54e;
 }
 
 .sect-1{
