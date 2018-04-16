@@ -126,17 +126,65 @@ header h2 {
 
 header .burger {
 	right: 155px;
+	top: 35px;
 	height: 60px;
+}
+
+header .burger:hover {
+	background: #eab985;
 }
 
 section {
 	text-align: center;
+	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	/*bc it is naturally in a row*/
 	flex: 1;
-	border: 1px solid #000;
-	height: 50%;
-	padding: 4%;
+	/*now they all have the same widths*/
+	height: auto;
+	padding: 1em;
+	margin: 0 .5em .8em;
+	border-radius: .35em;
+	color: #d8b9a5;
+}
+
+section h3 {
+	font-size: 30px;
+	text-shadow: 1px 1px 1px #4d4d4d;
+	text-decoration: underline;
+	padding-bottom: 20px;
+}
+
+.sect-1 {
+	background: url(../img/cat1.jpg) right no-repeat;
+	background-size: cover;
+}
+
+.sect-2 {
+	background: url(../img/cat2.jpg) right no-repeat;
+	background-size: cover;
+}
+
+.sect-3 {
+	background: url(../img/cat4.jpg) left no-repeat;
+	background-size: cover;
+}
+
+button {
+	margin-top: auto;
+	font-family: 'Londrina Shadow', cursive;
+	font-size: 1.4em;
+	text-shadow: 1px 1px 1px #4d4d4d;
+	height: 50px;
+	width: 80%;
+	align-self: center;
+	background: #ad8255;
+	border: 3px solid #000;
+	border-radius: 1em;
+}
+
+button:hover {
+	background: #eab985;
 }
 
 /*# sourceMappingURL=main.css.map */

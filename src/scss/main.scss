@@ -32,9 +32,9 @@ body {
 
 	.wrapper{
 		margin: 0 18.5%;
-		background: #eab985;
-		border-left: 5px solid $secondary-color;
-		border-right: 5px solid $secondary-color;
+		background: $secondary-color;
+		border-left: 5px solid $borders;
+		border-right: 5px solid $borders;
 		padding: 20px 2%;
 		@include flex;
 		height: 80%;
@@ -48,8 +48,8 @@ header{
 	background: $primary-color;
 	padding: 35px 18.5% 35px 18.5%;
 	@include flex;
-	border-top: 5px solid $secondary-color;
-	border-bottom: 5px solid $secondary-color;
+	border-top: 5px solid $borders;
+	border-bottom: 5px solid $borders;
 
 	img{
 		position: absolute;
@@ -59,38 +59,85 @@ header{
 	.logo{
 		height: 90px;
 		left: 155px;		
-		border: 3px solid $secondary-color;
+		border: 3px solid $borders;
 	}
 
 	h1{
 		font-size: 55px;
 		margin: 0 5% 20px 0;
-		text-shadow: 2px 2px 2px #4d4d4d;
+		text-shadow: 2px 2px 2px $shadows;
 		width: 100%;
 	}
 
 	h2{
 		font-size: 30px;
 		text-align: center;
-		text-shadow: 1px 1px 1px #4d4d4d;
+		text-shadow: 1px 1px 1px $shadows;
 		
 		height: 100%;
 	}
 
 	.burger{
 		right: 155px;
+		top: 35px;
 		height: 60px;
+		
+		&:hover{
+			background: $secondary-color;
+		}
 	}
+
 }
 
 section{
 	text-align: center;
-	flex-direction: column;
-	justify-content: space-between;
-	flex: 1;
-	border: 1px solid $secondary-color;
-	height: 50%;
-	padding: 4%;
+	@include flex;
+	flex-direction: column; /*bc it is naturally in a row*/
+	flex: 1; /*now they all have the same widths*/
+	height: auto;
+	padding: 1em;
+	margin: 0 .5em .8em;
+	border-radius: .35em;
+	color: #d8b9a5;
+
+	h3{
+		font-size: 30px;
+		text-shadow: 1px 1px 1px $shadows;
+		text-decoration: underline;
+		padding-bottom: 20px;
+	}
+}
+
+.sect-1{
+	background: url(../img/cat1.jpg) right no-repeat;
+	background-size: cover;	
+}
+
+.sect-2{
+	background: url(../img/cat2.jpg) right no-repeat;
+	background-size: cover;	
+}
+
+.sect-3{
+	background: url(../img/cat4.jpg) left no-repeat;
+	background-size: cover;	
+}
+
+button{
+	margin-top: auto;
+	font-family: 'Londrina Shadow', cursive;
+	font-size: 1.4em;
+	text-shadow: 1px 1px 1px $shadows;
+	height: 50px;
+	width: 80%;
+	align-self: center;
+	background: $primary-color;
+	border: 3px solid $borders;
+	border-radius: 1em;
+
+	&:hover{
+		background: $secondary-color;
+	}
 }
 
 
@@ -99,6 +146,113 @@ section{
 
 
 
+
+
+
+
+
+
+
+// .city-img{
+//   max-width: 100%;/* Put this on your images so they don't get pixelated*/
+//   width: 190px;
+// }
+
+// .main-header{
+//   padding: .5em 0;
+// }
+
+// h1 a,
+// ul a{
+//   text-align: center;
+//   display: block; /*a tags are inline by default*/
+//   padding: 10px 15px;
+// }
+// /*You don't need flex box on mobile*/
+
+// ul a{
+//   text-transform: uppercase;
+//   color: #3acec2;
+//   font-size: .95em;
+// }
+
+// ul a:hover{
+//   color: #125b84;
+// }
+
+// .hero, footer{
+//   text-align: center;
+// }
+
+// .hero{
+//   background: #3acec2;
+//   color: #fff;
+//   padding: 3.2em 0;
+//   margin-bottom: 48px;
+// }
+
+// .col{
+//   background: #edf4f7;
+//   padding: 1em;
+//   margin: 0 .5em .8em;
+//   border-radius: .35em;
+// }
+
+// .button{
+//   background: #3acec2;
+//   padding: .625em 1.25em;
+//   color: #fff;
+//   border-radius: .35em;
+// }
+
+// .button:hover{
+//   background: #122168;
+// }
+
+// footer{
+//   background: #d9e4ea;
+//   padding: 2em 0;
+//   margin-top: 30px;
+// }
+
+// @media screen and (min-width: 768px){
+//   .main-header,
+//   .row, ul{
+//     display: flex;
+//   }
+
+//   .main-header{
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .col{
+//     display: flex;
+//     flex-direction: column; /*bc it is naturally in a row*/
+//     flex: 1; /*now they all have the same widths*/
+//   }
+
+//   .col .button{
+//     align-self: flex-start;
+//     margin-top: auto; /*if you say auto in flexbox on a margin, whatever direction you are saying it is going to push all the margin to the direction that you told it to go. So in this case it's going to take up the rest of the space remaining at the top of the item.*/
+//   }
+
+//   .row{
+//     margin: 0 9%;
+//   }
+// }
+
+// @media screen and (min-width: 1024px){
+//   .main-header{
+//     flex-direction: row;
+//     padding: 0 9%;
+//   }  
+
+//   ul{
+//     margin-left: auto;
+//   }
+
+// }
 
 
 
