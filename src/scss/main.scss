@@ -27,8 +27,8 @@ TABLE OF CONTENTS:
 body {
 	background: url(../img/bg.jpg) no-repeat center;
 	background-size: auto;
-	font-family: $main-font
-	height: 100vh;
+	font-family: $main-font;
+	height: 100%;
 
 	.wrapper{
 		background: $secondary-color;
@@ -100,18 +100,25 @@ section{
 	}
 
 	h4{
-
+		font-family: $sub-font;
+		padding-bottom: 20px;
 	}
 
 	ul{
-		margin-left: 3em;
-		text-align: left;
+		align-self: center;
+		padding: 20px 0;
 
 		li{
-			list-style-type: url(../img/paw.png);
+			text-align: left;
+			list-style-type: circle;
 			font-family: $sub-font;
 		}	
 
+	}
+
+	div{
+		font-size: 25px;
+		padding-bottom: 30px;
 	}
 }
 
@@ -119,13 +126,17 @@ button{
 	margin-top: auto;
 	font-family: 'Londrina Shadow', cursive;
 	font-size: 1.4em;
-	text-shadow: 1px 1px 1px $shadows;
+	text-shadow: 1px 1px 1px #000;
 	height: 50px;
 	width: 80%;
 	align-self: center;
 	background: $primary-color;
 	border: 3px solid $borders;
 	border-radius: 1em;
+
+	&:focus{
+		outline: 0;
+	}	
 }
 
 .sect-1{
@@ -143,96 +154,60 @@ button{
 	background-size: cover;	
 }
 
-@mixin bp-tablet{
+//////////TABLET//////////////
+@include bp-tablet {
+	header{
+		border-left: none;
+		border-right: none;
+	}
+
 	.wrapper{
 		@include flex;
+		flex-direction: column;
 		margin: 0 18.5%;
 		width: 63%;
 	}
+
+	button:hover{
+			background: $secondary-color;
+	}
 }
 
-@mixin bp-desktop{
+//////////DESKTOP//////////////
+@include bp-desktop {
 
 	header{
-		background: $primary-color;
-		padding: 35px 18.5% 35px 18.5%;
-		@include flex;
-		border-top: 5px solid $borders;
-		border-bottom: 5px solid $borders;
-
-		img{
-			position: absolute;
-			top: 20px;
-		}
+		padding: 35px 6% 35px 6%;
 
 		.logo{
-			height: 90px;
-			left: 155px;		
-			border: 3px solid $borders;
+			width: 110px;
+
 		}
 
 		h1{
 			font-size: 55px;
 			margin: 0 5% 20px 0;
-			text-shadow: 2px 2px 2px $shadows;
 			width: 100%;
 		}
 
-		h2{
-			font-size: 30px;
-			text-align: center;
-			text-shadow: 1px 1px 1px $shadows;
-			height: 100%;
-		}
+	}
 
-		.burger{
-			right: 155px;
-			top: 35px;
-			height: 60px;
-			
-			&:hover{
-				background: $secondary-color;
+	.wrapper{
+		flex-direction: row; 
+		section{
+			padding: 1em;
+			margin: 0 .5em .8em;
+			border-radius: .35em;
+			color: #d8b9a5;
+
+			h3{
+				font-size: 30px;
+				text-shadow: 1px 1px 1px $shadows;
+				text-decoration: underline;
+				padding-bottom: 20px;
 			}
 		}
-
-	}
-
-	section{
-		text-align: center;
-		@include flex;
-		flex-direction: column; /*bc it is naturally in a row*/
-		flex: 1; /*now they all have the same widths*/
-		height: auto;
-		padding: 1em;
-		margin: 0 .5em .8em;
-		border-radius: .35em;
-		color: #d8b9a5;
-
-		h3{
-			font-size: 30px;
-			text-shadow: 1px 1px 1px $shadows;
-			text-decoration: underline;
-			padding-bottom: 20px;
-		}
-	}
-
-
-	button{
-		margin-top: auto;
-		font-family: 'Londrina Shadow', cursive;
-		font-size: 1.4em;
-		text-shadow: 1px 1px 1px $shadows;
-		height: 50px;
-		width: 80%;
-		align-self: center;
-		background: $primary-color;
-		border: 3px solid $borders;
-		border-radius: 1em;
-
-		&:hover{
-			background: $secondary-color;
-		}
-	}
+	}	
 }
 
 

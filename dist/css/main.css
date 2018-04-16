@@ -75,8 +75,8 @@ table {
 body {
 	background: url(../img/bg.jpg) no-repeat center;
 	background-size: auto;
-	font-family: 'Londrina Shadow', cursive;
-	height: 100vh;
+	font-family: "Londrina Shadow", cursive;
+	height: 100%;
 }
 
 body .wrapper {
@@ -110,7 +110,7 @@ header h1 {
 }
 
 header h2 {
-	font-family: 'Concert One', cursive;
+	font-family: "Concert One", cursive;
 	font-size: 30px;
 	text-align: center;
 	text-shadow: 1px 1px 1px #4d4d4d;
@@ -148,13 +148,42 @@ section h3 {
 	padding-bottom: 20px;
 }
 
+section h4 {
+	font-family: "Concert One", cursive;
+	padding-bottom: 20px;
+}
+
 section ul {
-	margin-left: 3em;
-	text-align: left;
+	align-self: center;
+	padding: 20px 0;
 }
 
 section ul li {
+	text-align: left;
 	list-style-type: circle;
+	font-family: "Concert One", cursive;
+}
+
+section div {
+	font-size: 25px;
+	padding-bottom: 30px;
+}
+
+button {
+	margin-top: auto;
+	font-family: 'Londrina Shadow', cursive;
+	font-size: 1.4em;
+	text-shadow: 1px 1px 1px #000;
+	height: 50px;
+	width: 80%;
+	align-self: center;
+	background: #ad8255;
+	border: 3px solid #000;
+	border-radius: 1em;
+}
+
+button:focus {
+	outline: 0;
 }
 
 .sect-1 {
@@ -170,6 +199,51 @@ section ul li {
 .sect-3 {
 	background: url(../img/cat4.jpg) left no-repeat;
 	background-size: cover;
+}
+
+@media only screen and (min-width: 640px) {
+	header {
+		border-left: none;
+		border-right: none;
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 0 18.5%;
+		width: 63%;
+	}
+	button:hover {
+		background: #eab985;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	header {
+		padding: 35px 6% 35px 6%;
+	}
+	header .logo {
+		width: 110px;
+	}
+	header h1 {
+		font-size: 55px;
+		margin: 0 5% 20px 0;
+		width: 100%;
+	}
+	.wrapper {
+		flex-direction: row;
+	}
+	.wrapper section {
+		padding: 1em;
+		margin: 0 .5em .8em;
+		border-radius: .35em;
+		color: #d8b9a5;
+	}
+	.wrapper section h3 {
+		font-size: 30px;
+		text-shadow: 1px 1px 1px #4d4d4d;
+		text-decoration: underline;
+		padding-bottom: 20px;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */
