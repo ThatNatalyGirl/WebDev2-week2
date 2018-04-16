@@ -177,12 +177,12 @@ section.sect-3 h3 {
 	color: #7aa54e;
 }
 
-section.sect-3 button {
+.notice-me-button {
 	border-color: #7aa54e;
 	text-shadow: 1px 1px 1px #000, 2px 2px 2px #7aa54e;
 }
 
-button {
+button, .notice-me-button {
 	margin-top: auto;
 	font-family: 'Londrina Shadow', cursive;
 	font-size: 1.4em;
@@ -195,7 +195,7 @@ button {
 	border-radius: 1em;
 }
 
-button:focus {
+button:focus, .notice-me-button:focus {
 	outline: 0;
 }
 
@@ -228,7 +228,7 @@ button:focus {
 		width: 79%;
 		margin: 0 10%;
 	}
-	button:hover {
+	button:hover, .notice-me-button:hover {
 		background: #eab985;
 	}
 }
