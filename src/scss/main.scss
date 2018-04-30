@@ -74,7 +74,12 @@ header{
 		height: 60px;
 		
 		&:hover{
-			background: none;
+			background: none;	
+		}
+
+		&:focus{
+		outline: 0;
+		background: $secondary-color;
 		}
 	}
 }
@@ -143,6 +148,7 @@ button{
 
 	&:focus{
 		outline: 0;
+		background: $secondary-color;	
 	}	
 }
 

@@ -126,6 +126,11 @@ header .burger:hover {
 	background: none;
 }
 
+header .burger:focus {
+	outline: 0;
+	background: #eab985;
+}
+
 section {
 	text-align: center;
 	display: flex;
@@ -192,6 +197,7 @@ button {
 
 button:focus {
 	outline: 0;
+	background: #eab985;
 }
 
 .notice-me-button {
